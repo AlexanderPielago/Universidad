@@ -12,6 +12,11 @@
         "laravel-vite-plugin": "^1.2.0",
         "sass-embedded": "^1.86.0",
         "tailwindcss": "^4.0.0",
-        "vite": "^6.0.11"
+        "vite": "^6.2.2"
+    },
+    "dependencies": {
+        "build": "^0.1.4",
+        "npm": "^11.2.0",
+        "run": "^1.5.0"
     }
 }

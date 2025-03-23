@@ -1,0 +1,11 @@
+body {
+    cursor: pointer;
+}
+.sidebar {
+    width: 300px;
+    transition: all 0.3s;
+}
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+}

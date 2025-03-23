@@ -1,0 +1,182 @@
+$azul-oscuro: #125295;
+$azul-medio: #1765ba;
+$azul-hover: #243a82;
+$color-submenu: #0056b3;
+
+.sidebar {
+    background: $azul-medio;
+    color: white;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+
+    .sidebar-container {
+        height: 100%;
+        width: 100%;
+        padding: 10px ;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
+        .sidebar-topbard {
+            height: 50px;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                width: 30%;
+                height: 60px;
+                padding: 7px 0;
+
+                .rotar {
+                    width: 100%;
+                    height: 100%;
+                    animation: giroInfinito 3s linear infinite;
+                }
+            }
+
+            .title {
+                width: 70%;
+                height: 60px;
+                margin: 10px 0 0;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+
+                label, p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                }
+
+                label {
+                    font-size: 23px;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 11px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .sidebar-main {
+            min-width: 200px;
+            min-height: 200px; 
+            margin: 10px 0;
+            box-sizing: border-box;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            scrollbar-width: none; 
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                flex-grow: 1;
+            }
+
+            li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                transition: background-color 0.3s ease-in-out; 
+            
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.7rem;
+                    text-decoration: none;
+                    color: #fff;
+                    gap: 7px;
+                    transition: color 0.3s ease-in-out; 
+            
+                    i {
+                        flex: 1;
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+            
+                    span {
+                        flex: 8;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                &:hover{
+                    background-color: $azul-hover;
+                    transition: background-color 0.3s ease-in-out;
+                }
+            
+                &.active {
+                    background-color: $color-submenu;
+                    transition: background-color 0.3s ease-in-out;
+                    border: none;
+                }
+            }
+            
+            .submenu {
+                overflow: hidden;
+                display: none;
+                background:$color-submenu;
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0 0 0 15px;
+                }
+                li {
+                    margin-bottom: 7px;
+                    border-left: 10px solid rgb(14, 213, 227); 
+                    border-bottom: none;
+                    
+                    display: flex;
+                    justify-content: start;
+                    a {
+                        padding: 0.4rem;
+                        font-size: 0.9rem;
+                    }
+                    span {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        text-transform: capitalize;
+                    }
+
+                    &:hover{
+                        background-color: $azul-hover;
+                        transition: background-color 0.3s ease-in-out;
+                    }
+                    
+                }
+            }
+        }
+
+        .sidebar-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar-main {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@keyframes giroInfinito {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

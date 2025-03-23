@@ -17,12 +17,13 @@
         />
         @vite(['resources/sass/login.scss', 'resources/js/app.js'])
     </head>
-    
+    <style>
+        body {
+            background: url('{{ asset('img/jodes.svg') }}') no-repeat center center fixed;
+            background-size: cover;
+            }
+    </style>
     <body>
-        
-        <header>
-            <!-- place navbar here -->
-        </header>
         <main>
             <div class="container vh-100 d-flex align-items-center justify-content-center">
                 <div class="login-box">
@@ -33,23 +34,26 @@
                         <div class="title-form col-9 text-center">
                             <p class="name-universidad">UNIVERSIDAD NACIONAL DE INGENIERÍA</p>
                             <p class="name-facultad">Facultad de Ingeniería Mecánica</p>
-                            <h5 class="name-sistema">SISTEMA DE PLANIFICACIÓN DE RECURSOS ACADÉMICOS Y EMPRESARIALES</h5>
+                            <h4 class="name-sistema">SISTEMA DE PLANIFICACIÓN DE RECURSOS ACADÉMICOS Y EMPRESARIALES</h4>
                         </div>
                     </div>
                     <div class="main-form">
                         <form>
-                            <div class="mb-3">
+                            <div class="input-container mb-3">
                                 <label for="email" class="form-label">Usuario</label>
                                 <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+                                <span class="line"></span>
                             </div>
-                            <div class="mb-3">
+                            <div class="input-container mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                                <span class="line"></span>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">iniciar sesion</button>
-                            <a href="#" class="btn btn-link w-100 mt-2">¿Olvidaste tu contraseña?</a>
-                            <p><a href="">ver comunicados</a></p>
-                            
+                            <div class="footer-text text-center d-flex flex-column align-items-center">
+                                <a href="#" class="forget">¿Olvidaste tu contraseña?</a>
+                                <a class="link" href="">ver comunicados</a>
+                            </div>
                         </form>
                     </div>
                 </div>

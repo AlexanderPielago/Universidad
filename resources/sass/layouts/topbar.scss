@@ -1,0 +1,63 @@
+$azul-claro:#3691ca;
+$color-white:rgb(252, 248, 248);
+$cargo: #FFFF99;
+.topbar {
+    background-color: $azul-claro;
+    color: $color-white;
+    .menu-btn{        
+        color: $color-white;
+        background-color: $azul-claro;
+        border: #3691ca ;
+        font-size: 25px;
+        padding: 1px 10px;
+        
+    }
+    .menu-btn:hover{
+        background-color: $color-white;
+        color: $azul-claro;
+    }
+    .user{
+        .user-icon,
+        .menu{
+            font-size: 1.2rem;
+
+            color: $color-white;
+        }
+        span {
+            font-style: normal; 
+            font-size: 0.9rem;
+            margin: 0 5px;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+        }
+        .cargo {
+            color: $cargo; 
+            font-weight: bold;
+        }
+        .dropdown{
+            cursor: pointer;
+        }
+        li .primary {
+            color: $azul-claro;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown i{
+            margin: 0 10px 0 0 ; 
+            font-size: 20px;          
+        }
+        li a.active{
+            color: $color-white;
+            pointer-events: none;
+            cursor: default;    
+        }
+        
+        @media (max-width: 768px) {
+            .user-name{
+                display: none;
+            }
+        }
+        
+    }
+}
